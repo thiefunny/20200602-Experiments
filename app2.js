@@ -1,4 +1,3 @@
-
 const parentEl = document.querySelector(".parent");
 
 for (let i = 0; i < parentEl.childElementCount; i++) {
