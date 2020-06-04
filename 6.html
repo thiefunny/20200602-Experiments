@@ -9,10 +9,26 @@
 
 <body>
     <nav></nav>
-<input id="a" type="range" min="0.05" max="0.3" step="0.01" value="0.1">
-<input id="rstep" type="range" min="0.01" max="0.2" step="0.01" value="0.02">
-<input id="rdiv" type="range" min="1" max="100" step="1" value="10">
-<p class="score"></p>
+
+    <div class="inputs">
+        <label for="r3">&oslash;>
+            <input id="r3" type="range" min="-0.1" max="0.1" step="0.005" value="0.1">&oslash;< </label> 
+        </div> 
+            
+        <div class="inputs">
+            <label for="rstep">&curvearrowleft;<input id="rstep" type="range" min="-0.2" max="0.2" step="0.001" value="0.1">&curvearrowright;</label>
+    </div>
+
+
+    <div class="inputs">
+        <label for="a">alpha<input id="a" type="range" min="0.05" max="0.3" step="0.01" value="0.1"></label>
+<label for="rdiv">zakręt
+        <input id="rdiv" type="range" min="1" max="20" step="0.5" value="10">
+    </label>
+    </div>
+
+
+    <p class="score"></p>
     <main>
         <div class="canvas">
             <canvas id="drawing" width="500px" height="500px"></canvas>

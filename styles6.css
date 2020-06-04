@@ -1,7 +1,9 @@
 body {
     background: #222;
     color: #fff;
-}
+    position: relative;
+    /* text-align: center; */
+    }
 
 a {
     color: #559;
@@ -9,15 +11,36 @@ a {
     padding: 0 1rem 2rem 0
 }
 
-main {}
-
 .canvas {
     position: absolute;
     left: 50vw;
     top: 50vh;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-45%) translateX(-50%);
 }
 
 canvas {
     background: #111;
 }
+
+.inputs {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+input#rstep, input#r2 {
+    width: 400px;
+}
+
+input {
+    margin: 0 20px;
+    top:6px;
+    position: relative;
+}
+
+label {
+    position: relative;
+    /* top: 20px */
+}
+
+/* #r3 {transform: rotate(90deg);} */
