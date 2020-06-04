@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {background: #222;}
+        a {color: #559; display: inline-block; padding: 0 1rem 2rem 0}
+        canvas {background: #111;}
+    </style>
+</head>
+
+<body>
+    <canvas id="drawing" width="500px" height="500px"></canvas>
+    <script>
+        const canvasEl = document.querySelector("#drawing");
+        const ctx = canvasEl.getContext('2d');
+
+        ctx.strokeStyle = '#fff';
+
+        function circle() {
+            for (let i = 0; i < 100; i++) {
+                ctx.beginPath();
+                ctx.arc(100, 100, i, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+        }
+
+        setInterval(circle(), 1000);
+
+    </script>
+</body>
+
+</html>
