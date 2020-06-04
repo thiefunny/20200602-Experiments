@@ -1,51 +1,31 @@
 const canvasEl = document.querySelector("#drawing");
 const ctx = canvasEl.getContext('2d');
 
-ctx.strokeStyle = '#fff';
-let x = 0;
+// ctx.strokeStyle = '#fff';
+let x = 250,
+    y = 250,
+    r = 0,
+    a = 0.1, cr = 200, cg = 200, cb = 200;
 
-function circle(x) {
 
-    // ctx.beginPath();
-    ctx.arc(100, 100, x, 0, 2 * Math.PI);
+function circle(x, y, r, cr, cg, cb, a) {
+    
+    ctx.beginPath();
+    ctx.strokeStyle = 'hsla(' + cr + ', ' + cg + '%, ' + cb + '%, ' +  a + ')';
+    ctx.arc(x, y, r, 0, 2 * Math.PI);
     ctx.stroke();
+    ctx.closePath();
 }
 
 setInterval(function () {
-    if (x < 100) {
-        x++;
-        circle(x);
+    if (r < 400) {
+        r++;
+        a = 0.5;
+        x += Math.random() * 4 - 2;
+        y += Math.random() * 4 - 2;
+        cr = r*3.6; 
+        cg = 70;
+        cb = 50; 
+        circle(x, y, r, cr, cg, cb, a);
     }
-}, 100);
-
-
-
-// ctx.clearRect(20,20,40,40);
-
-
-// ctx.fillStyle = '#d00';
-// ctx.fillRect(10,10,50,50);
-
-// ctx.strokeStyle = 'rgb(255, 255, 255)';
-// ctx.strokeRect(30,30,100,70);
-
-// ctx.clearRect(20,20,40,40);
-
-
-// ctx.strokeStyle = 'rgb(0, 255, 255)';
-// ctx.beginPath();
-// ctx.moveTo(200, 200);
-// ctx.lineTo(400, 350);
-// ctx.lineTo(100, 250);
-// ctx.closePath();
-// ctx.stroke();
-
-// ctx.beginPath();
-// ctx.arc(100,100,50,0,2*Math.PI);
-// // ctx.closePath();
-// ctx.stroke();
-
-// ctx.beginPath();
-// ctx.moveTo(100,100);
-// ctx.arcTo(100,100,300,300,300);
-// ctx.stroke();
+}, 30);
