@@ -4,7 +4,7 @@ const h1El = document.querySelector("h1");
 
 document.addEventListener("mousemove", function (event) {
 
-    // console.log(event);
+    console.log(event);
     h1El.innerHTML = "można ctrl albo shift, uwaga na easter egga";
 
 if (event.shiftKey && event.ctrlKey) {
