@@ -1,7 +1,7 @@
 //menu
 
 const menuEl = document.querySelector("nav");
-menuEl.innerHTML = '<a href="index.html">paseczki jeden</a> <a href="2.html">paseczki dwa</a> <a href="3.html">paseczek ruchomy</a> <a href="4.html">canvas 1</a> <a href="5.html">canvas 2</a> <a href="6.html">canvas 3</a> <a href="7.html">clientXY</a> <a href="8.html">clientXY i ctrlKey</a> <a href="9.html">krzyż</a>';
+menuEl.innerHTML = '<a href="index.html">paseczki jeden</a> <a href="2.html">paseczki dwa</a> <a href="3.html">paseczek ruchomy</a> <a href="4.html">canvas 1</a> <a href="5.html">canvas 2</a> <a href="6.html">canvas 3</a> <a href="7.html">clientXY</a> <a href="8.html">clientXY i ctrlKey</a> <a href="9.html">krzyż</a> <a href="10.html">kostka</a>';
 
 const bodyEle = document.querySelector("body");
 bodyEle.style.fontFamily = "sans-serif";
