@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.todo__app {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.list__item {
+    list-style: none;
+    border-bottom: 2px solid slategray;
+    padding: 20px 0px;
+}
+
+.list__item:hover {
+    cursor: default;
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 2rem 0px;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black
+}
+
+.done {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
