@@ -1,29 +1,42 @@
 const inputEl = document.querySelector("input");
-const listItemEl = document.querySelector(".list__item");
+const listItemEl = document.querySelectorAll(".list__item");
 const listEl = document.querySelector("ul");
-const bodyEl = document.querySelector("body");
+// const bodyEl = document.querySelector("body");
 
-let li1 = document.createElement("li");
+inputEl.addEventListener("keypress", function (event) {
+    
+    // console.log(listItemEl);
+    if (event.keyCode === 13) {
+        let li1 = document.createElement("li");
+        listEl.appendChild(li1);
+        li1.setAttribute("class", "list__item");
+        li1.innerHTML = inputEl.value;
+        inputEl.value = '';
 
-inputEl.addEventListener("keypress", function(event) {
-        console.log(event);
-})
+        // let listItemEl = document.querySelectorAll(".list__item");
+        // for (let elem of listItemEl) {
+        //     elem.addEventListener("click", function() {
+        //         elem.classList.toggle("done");
+        //     })
 
-inputEl.addEventListener("keypress", function(event) {
-    if (event.keyCode === 13) {console.log(inputEl.value);}
-})
+    }
+    }
+    )
 
-// console.log(inputEl.value);
+console.log(listEl);
 
-// console.log(li1);
-// listEl.appendChild(li1);
-// li1.setAttribute("class", "list__item");
-// li1.innerHTML = "coś";
-
-
+    listEl.addEventListener("click", function() {
+        for (let elem of listItemEl) {
+        elem.classList.toggle("done");}
+    })
 
 // function toggleDone() {
-//     listItemEl.classList.toggle("done");
-// }
+    // console.log(listItemEl);
 
-// listItemEl.addEventListener("click", toggleDone);
+
+// toggleDone();
+
+
+// listItemEl.addEventListener("click", function() {
+//     listItemEl.classList.toggle("done");
+// })
