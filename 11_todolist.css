@@ -58,6 +58,6 @@ span {
     font-size: 1.5rem;
 }
 
-.show {
-    visibility: hidden;
+.invisible {
+    visibility: hidden; 
 }

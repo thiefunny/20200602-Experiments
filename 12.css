@@ -1,0 +1,22 @@
+body {
+    background: #222;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background: orange;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.question {background: blue;padding: 1rem 0 1rem 0}
+
+.answer {background: pink;padding: 1rem 0 1rem 0}
+
+div {
+    /* padding: 1rem 0 1rem 0 */
+}

@@ -7,4 +7,6 @@ const bodyEle = document.querySelector("body");
 bodyEle.style.fontFamily = "sans-serif";
 
 const styleEl = document.querySelector("style");
-styleEl.innerHTML = "a.topmenu {margin:0; padding:0;} a {color: #fff; opacity:0.3; display: inline-block;    padding: 0.5rem 0.5rem 2rem 0.5rem} ";
+styleEl.innerHTML = " a {color: #fff; opacity:0.3; display: inline-block;    padding: 0.5rem 0.5rem 2rem 0.5rem} ";
+
+// a.topmenu {margin:0; padding:0;}
