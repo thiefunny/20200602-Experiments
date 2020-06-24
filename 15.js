@@ -1,16 +1,17 @@
+const targettimeEl = document.querySelector(".target");
 const daysEl = document.querySelector(".day");
 const hourEl = document.querySelector(".hour");
 const minEl = document.querySelector(".min");
 const secEl = document.querySelector(".sec");
 
 let teraz = new Date();
-const wtedy = new Date("2021-01-01");
+const wtedy = new Date("2020-06-24 21:17:25");
 
-let czas = setInterval(function() {
-    
+function roznicaczasu() {
+
     teraz = new Date();
     roznica = new Date(wtedy - teraz);
-    
+
     let miliseconds = Math.floor(roznica.getTime());
     let seconds = Math.floor(miliseconds / 1000);
     let minutes = Math.floor(seconds / 60);
@@ -24,14 +25,28 @@ let czas = setInterval(function() {
     // console.log("days " + days + ", hours " + hoursleft + ", minutes " + minutesleft + ", seconds " + secondsleft)
 
     return {
-        rDays: days, 
-        rhours: hoursleft, 
-        rMinutes: minutesleft, 
+        rDays: days,
+        rHours: hoursleft,
+        rMinutes: minutesleft,
         rSeconds: secondsleft
     }
 
+}
+
+let showTimer = setInterval(function () {
+    console.log(Math.floor((wtedy - teraz)/1000));
+    if (Math.floor(wtedy - teraz)/1000 < 1) {
+        clearInterval(showTimer); targettimeEl.innerHTML = "JUUUUUUUUŻ!!!!!!";
+    } else {
+        targettimeEl.innerHTML = wtedy;
+        daysEl.innerHTML = roznicaczasu().rDays;
+        hourEl.innerHTML = roznicaczasu().rHours;
+        minEl.innerHTML = roznicaczasu().rMinutes;
+        secEl.innerHTML = roznicaczasu().rSeconds;
+    }
 }, 1000);
 
-console.log(czas);
+
+
 
 // daysEl.innerHTML = czas.rDays;
