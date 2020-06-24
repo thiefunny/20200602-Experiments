@@ -1,7 +1,7 @@
 const accordionItemsEl = document.getElementsByClassName("accordion__item");
 
 function main() {
-  for (let item of accordionItemsEl) {
+  for (let item of questionEl) {
     let accHeader = item.firstElementChild;
     accHeader.addEventListener("click", function() {
       this.classList.toggle("active");
