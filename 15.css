@@ -1,0 +1,13 @@
+body {
+    background: #222;
+    color: white
+}
+
+.container {
+    position: relative;
+    top: 2rem;
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
