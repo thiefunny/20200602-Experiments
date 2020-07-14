@@ -5,7 +5,7 @@ const minEl = document.querySelector(".min");
 const secEl = document.querySelector(".sec");
 
 let teraz = new Date();
-const wtedy = new Date("2020-06-24 21:17:25");
+const wtedy = new Date("2020-07-10 21:17:25");
 
 function roznicaczasu() {
 
