@@ -40,15 +40,11 @@ function wynik() {
     
     switch (Operation.operationType) {
         case "+ (add)":
-            // console.log(Operation.sum());
-            pEl.classList.remove("dark");
             pEl.innerHTML = Operation.sum();
-            pEl.classList.add("dark");
             break;
 
         case "* (multiply)":
-            pEl.innerHTML = Operation.sum();iam
-            
+            pEl.innerHTML = Operation.multiply();
             break;
     }
 }
