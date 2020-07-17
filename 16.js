@@ -4,6 +4,7 @@ const operationTypeEl = document.querySelector("#operationtype");
 const buttonScoreEl = document.querySelector("#score");
 const buttonAddFieldEl = document.querySelector("#addfield");
 const ulEL = document.querySelector(".inputs");
+const pEl = document.querySelector("p");
 
 let Operation = {
     sum: function () {
@@ -26,30 +27,36 @@ let Operation = {
 let Score = [];
 
 function wynik() {
-    let digitInputEl = document.querySelectorAll("input");
+    let InputEl = document.querySelectorAll("input");
     let i = 0;
-    for (elem of digitInputEl) {
+    for (elem of InputEl) {
         Score[i] = Number(elem.value);
+        console.log(Score[i]);
         i++;
     }
 
     Operation.operationType = operationTypeEl.value;
+    console.log(operationTypeEl.value);
     
     switch (Operation.operationType) {
-        case "+":
-            console.log(Operation.sum());
+        case "+ (add)":
+            // console.log(Operation.sum());
+            pEl.classList.remove("dark");
+            pEl.innerHTML = Operation.sum();
+            pEl.classList.add("dark");
             break;
 
-        case "*":
-            console.log(Operation.multiply());
+        case "* (multiply)":
+            pEl.innerHTML = Operation.sum();iam
+            
             break;
     }
 }
 
 function addField() {
-    let newField = document.createElement("input");
-    // newField.classList.add("digitsinput");
-    ulEL.appendChild(newField);
+    let newInput = document.createElement("li");
+    newInput.innerHTML = 'Number: <input type="number">';
+    ulEL.appendChild(newInput);
 }
 
 buttonScoreEl.addEventListener("click", wynik);

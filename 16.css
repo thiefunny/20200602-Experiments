@@ -1,17 +1,37 @@
 body {
     background: #222;
-    color: white
+    color: white;
+    position: relative;
 }
 
 button {
     display: block;
-    margin: 3rem auto;
+    /* margin: 3rem auto; */
+    margin: 1.5rem 0 3rem 8rem;
+    background-color: yellowgreen;
+    color: black;
 }
 
 li {
     list-style-type: none;
     margin: 1rem;
-    /* padding: 1rem; */
+    
 }
 
-.digitsinput {}
+h1 {margin-bottom: 3rem;}
+
+p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 7rem;
+    color: white;
+    z-index: 5;
+    opacity: 1;
+}
+
+.dark {
+    opacity: 0;
+    transition: 1s all ease;
+}

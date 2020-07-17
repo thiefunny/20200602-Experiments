@@ -10,30 +10,32 @@
 </head>
 
 <body>
-    <nav></nav>
+    <!-- <nav></nav> -->
+<h1>Calculate as many numbers as you want</h1>
     <ul class="inputs">
-        <li class="digitsinput">
-            <label for="liczba1">liczba1 <input type="text" id="liczba1"></label>
+        <li>
+            <label for="liczba1">Number: <input type="number" id="liczba1"></label>
         </li>
-        <li class="digitsinput">
-            <label for="liczba2">liczba2 <input type="text" id="liczba2"></label>
+        <li>
+            <label for="liczba2">Number: <input type="number" id="liczba2"></label>
         </li>
     </ul>
-
+    <button id="addfield">Add another field?</button>
     <ul>
         <li>
-            <label for="operationtype">Operation type
+            <label for="operationtype">Operation type:
                 <select id="operationtype">
-                    <option>+</option>
-                    <option>*</option>
+                    <option>+ (add)</option>
+                    <option>* (multiply)</option>
                 </select>
             </label>
         </li>
     </ul>
-    <button id="addfield">dodaj pole</button>
-    <button id="score">wynik</button>
+ 
+    <button id="score">Calculate!</button>
+    <p></p>
 
-    <script src="menu.js"></script>
+    <!-- <script src="menu.js"></script> -->
     <script src="16.js"></script>
 </body>
 
