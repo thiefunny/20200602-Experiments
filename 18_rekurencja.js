@@ -2,12 +2,16 @@
 
 // }
 
-let total = 0;
+////////////// NIE DZIAŁA I BEZ SENSU
 
-function sumarr(arr) {
-    
-    return arr[arr.length-1]
+let i = 0;
 
+function sumarr() {
+    let arr = [1,2,3,4,5];
+    if (i === arr.length) {
+        return arr[arr.length]
+    }
+    return arr[i] + sumarr(arr[i + 1]);
 }
 
-sumarr([1,2,3,4,5]);
+console.log(sumarr());
