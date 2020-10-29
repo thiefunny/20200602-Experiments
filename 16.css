@@ -1,0 +1,52 @@
+body {
+    background: #222;
+    color: white;
+    /* position: relative; */
+}
+
+button {
+    display: block;
+    /* margin: 3rem auto; */
+    margin: 1.5rem 0 3rem 8rem;
+    background-color: yellowgreen;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    margin: 1rem;
+
+}
+
+h1 {
+    margin-bottom: 3rem;
+    /* width: 50% */
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 7rem;
+    color: white;
+    /* z-index: 5; */
+    /* opacity: 1; */
+}
+
+.dark {
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 50%;
+    height: 30%;
+    background-color: #111;
+}

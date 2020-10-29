@@ -5,12 +5,20 @@ const minEl = document.querySelector(".min");
 const secEl = document.querySelector(".sec");
 
 let teraz = new Date();
-const wtedy = new Date("2020-06-24 21:17:25");
+let zaminute = new Date(1000*10);
+// const wtedy = teraz + zaminute;
+// const wtedy = new Date("2020-07-20 21:17:25");
+let wtedy = new Date(teraz.getTime() + zaminute.getTime());
+// let roznica = new Date(wtedy - teraz);
+console.log("teraz " + teraz.getTime());
+console.log("zaminute " + zaminute);
+console.log("wtedy " + wtedy);
+// console.log("roznica " + roznica);
 
 function roznicaczasu() {
 
     teraz = new Date();
-    roznica = new Date(wtedy - teraz);
+    let roznica = new Date(wtedy - teraz);
 
     let miliseconds = Math.floor(roznica.getTime());
     let seconds = Math.floor(miliseconds / 1000);
@@ -34,11 +42,11 @@ function roznicaczasu() {
 }
 
 let showTimer = setInterval(function () {
-    console.log(Math.floor((wtedy - teraz)/1000));
+    // console.log(Math.floor((wtedy - teraz)/1000));
     if (Math.floor(wtedy - teraz)/1000 < 1) {
         clearInterval(showTimer); targettimeEl.innerHTML = "JUUUUUUUUŻ!!!!!!";
     } else {
-        targettimeEl.innerHTML = wtedy;
+        targettimeEl.innerHTML = "odliczamy 10 sekund";
         daysEl.innerHTML = roznicaczasu().rDays;
         hourEl.innerHTML = roznicaczasu().rHours;
         minEl.innerHTML = roznicaczasu().rMinutes;

@@ -38,7 +38,5 @@ function toggleDone() {
     })
 }
 
-
-
 addItem();
 toggleDone();
