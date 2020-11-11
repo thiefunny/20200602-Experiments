@@ -1,0 +1,53 @@
+:root {
+    --navwidth: 10%;
+    --paddingtopnav: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+nav {
+    font-size: x-small;
+    width: var(--navwidth);
+    text-align: justify;
+    padding: 10px;
+    background: chartreuse;
+}
+
+nav li {
+    margin: 0 0 0 1em;
+    padding-bottom: 1em;
+    list-style-type: circle;
+}
+
+main {
+    padding: var(--paddingtopnav) 1vw 0 1vw;
+    background: cornsilk;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+}
+
+label {
+    text-align: center;
+    display: block;
+}
+
+input {
+    display: block;
+    margin: 1rem auto 1rem;
+}

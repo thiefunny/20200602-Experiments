@@ -1,4 +1,9 @@
-/* .all {background: fuchsia; } */
+.all {
+    /* background: fuchsia; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
 button {
     margin: auto;
@@ -11,4 +16,11 @@ button {
     color: white;
     height: 300px;
     max-width: 1000px;
+    /* visibility: hidden; */
+    display: none;
+}
+
+.show {
+    /* visibility: visible; */
+    display: block;
 }
