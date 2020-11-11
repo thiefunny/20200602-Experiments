@@ -1,0 +1,14 @@
+/* .all {background: fuchsia; } */
+
+button {
+    margin: auto;
+    display: block;
+}
+
+.modal {
+    margin: auto;
+    background: forestgreen;
+    color: white;
+    height: 300px;
+    max-width: 1000px;
+}
