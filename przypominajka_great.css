@@ -39,7 +39,8 @@ main {
     align-items: center;
 }
 
-.content {
+.content__one {
+
 }
 
 label {
@@ -50,4 +51,17 @@ label {
 input {
     display: block;
     margin: 1rem auto 1rem;
+}
+
+#inputcount:invalid {
+    border-color: red
+}
+
+li {
+    list-style-type: none;
+}
+
+.content_two ul {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 }
