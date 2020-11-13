@@ -4,7 +4,7 @@ const nowEl = document.getElementById("now");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
-let deadline = new Date(2021, 10, 13, 11, 30, 20);
+let deadline = new Date(2020, 10, 13, 14, 30, 20);
 let now = new Date;
 
 let seconds, minutes, secondsLeft, minutesLeft, difference;

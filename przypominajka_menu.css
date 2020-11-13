@@ -1,1 +1,42 @@
-.title {background-color: yellow }
+body {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+body.centermain {
+
+    transition: 1s all ease;
+}
+
+main {
+    position: relative;
+    width: 20%;
+    background: chartreuse;
+    transition: 0.8s all ease;
+    left: -65%;
+}
+
+.center {
+    left: 0px;
+    transition: 0.8s all ease;
+}
+
+#deadline,
+#now,
+.liTodoist {
+    font-size: x-small;
+}
+
+.title {
+    background-color: yellow
+}
+
+#run {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

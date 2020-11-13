@@ -17,6 +17,7 @@ removeTask = (event) => {
     for (elem of liEls) {
         if (event.target === elem) {elem.remove()}
     }
+    inputEl.focus();
 }
 
 inputEl.value = null;
