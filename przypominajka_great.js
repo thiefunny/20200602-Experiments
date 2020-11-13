@@ -50,6 +50,7 @@ function contentThreeCalculate() {
     for (let elem of document.querySelectorAll("#contenttwoinputel")) {
         sumOfInputs = sumOfInputs + Number(elem.value);
     }
+
     contentFourStripes();
 }
 
@@ -65,16 +66,23 @@ function contentFourStripes() {
         elem.style.height = "100%";
         elem.style.backgroundColor = "rgb(" + Math.random()*255 + ",0,0)";
     }
-    mainEl.appendChild(document.createElement("button")).classList = "bigbutton";
+    mainEl.appendChild(document.createElement("div")).classList = "bigbutton";
     let buttonEL = document.querySelector(".bigbutton");
-    buttonEL.innerHTML = "click";
-    buttonEL.addEventListener("click", contentFive)
+    buttonEL.innerHTML = '<a href="przypominajka_menu.html"><button class="bigbutton">click</button></a>';
+    // buttonEL.addEventListener("click", contentFive)
 }
 
 function contentFive() {
-    console.log("contentFive");
     
 }
 
+function remove(tempEl) {tempEl.style.display = "none";}
+
+
+// ----------------------------------
+
 inputCountEl.focus();
 inputCountEl.addEventListener("keydown", inputcountfunction);
+
+// remove(contentOneEl);
+// contentFive();
