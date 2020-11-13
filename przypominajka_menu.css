@@ -7,11 +7,6 @@ body {
     width: 100%;
 }
 
-body.centermain {
-
-    transition: 1s all ease;
-}
-
 main {
     position: relative;
     width: 20%;
@@ -39,4 +34,13 @@ main {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+#timer,
+#todoist {transition: 0.8s all ease;}
+
+.short {
+    height: 35px;
+    overflow: hidden;
+    transition: 0.8s all ease;
 }
