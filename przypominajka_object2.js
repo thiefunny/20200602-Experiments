@@ -1,5 +1,4 @@
 const input = document.getElementById("input");
-// const p = document.getElementsByTagName("p");
 const p = document.getElementById("p");
 
 let content, html;
