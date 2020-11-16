@@ -11,7 +11,7 @@ runEl.addEventListener("click", function() {
 
 mainEl.addEventListener("click", function(event) {
 
-for (elem of sectionEl) {
+for (let elem of sectionEl) {
     elem.onclick = function() {
         // console.log(this);
         this.classList.toggle("short");
