@@ -23,8 +23,7 @@ konsola = () => {
     let x = Math.round(Math.random() * 9);
     console.log(fishes[x].talk())
 
-    if (repeatTimes >= 1
-        ) {
+    if (repeatTimes >= 1) {
         clearInterval(repeat)
     } else {
         repeatTimes++;
