@@ -1,30 +1,35 @@
+let repeatTimes = 0;
+let fishes = new Array;
+
 let Fish = function (gatunekarg, wielkoscarg) {
     this.gatunek = gatunekarg,
-    this.wielkosc = wielkoscarg
+        this.wielkosc = wielkoscarg
 }
 
 Fish.prototype.show = function () {
     return `${this.gatunek} ${this.wielkosc}`
-    }
+}
 
-let arr = new Array;
-let variable, fishvar;
+Fish.prototype.talk = function () {
+    return `Złowiłem właśnie ${this.show()}! :)`
+}
 
 for (i = 0; i < 10; i++) {
     let j = Math.round(Math.random() * 100);
-    fish = new Fish(`ryba${i}`, j)
-    arr.push(fish);
+    fishes.push(new Fish(`ryba${i}`, j));
 }
 
-for (elem of arr) {
-    // console.log(elem);
-    console.log(elem.show());
+konsola = () => {
+    let x = Math.round(Math.random() * 9);
+    console.log(fishes[x].talk())
+
+    if (repeatTimes >= 30) {
+        clearInterval(repeat)
+    } else {
+        repeatTimes++;
+    }
+
 }
 
-// console.log(arr[1].show());
-
-// arr[3]
-
-// console.log(arr[3])
-
+let repeat = setInterval(konsola, 50);
 
