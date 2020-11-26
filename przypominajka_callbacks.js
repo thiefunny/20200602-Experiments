@@ -25,7 +25,4 @@ const calculations = (arr2, callback) => {
 
 
 console.log(calculations(calculations([2,4,7,9], squareEquation), sumEquation))
-console.log(calculations([2,4,7,9], sumEquation))
-
-
-
+// console.log(calculations([2,4,7,9], sumEquation))
