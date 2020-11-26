@@ -1,3 +1,34 @@
+// chained Promise 3
+
+const dinnerEaten = true;
+const wasTasty = true;
+
+const Dinner = new Promise((resolve, reject) => {if (dinnerEaten) {resolve('Dinner eaten...')} else {reject('I\'m still hungry!')}})
+
+Dinner
+.then(result => {console.log(result); return Tasty}, result => {console.log(result)})
+.then(resultTasty => console.log(resultTasty), resultTasty => console.log(resultTasty))
+
+// .then(result => {console.log(result); return result += 1})
+
+const Tasty = new Promise((resolve, reject) => {
+    if (wasTasty) {
+        resolve("and it was tasty! MNIAM!")
+    } else {
+        reject("but it was awful. Ble... :(")
+    }
+})
+
+// Dinner.then(result => console.log(result), result => console.log(result));
+
+// Tasty.then(result => console.log(result), result => console.log(result));
+
+
+// ---------------------------------------------------------------
+
+
+/* // regular Promise
+
 let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const myPromise = new Promise((resolve, reject) => {
@@ -16,7 +47,40 @@ const myPromise = new Promise((resolve, reject) => {
         reject()
     }
 
-}).then(_ => console.log('ok'), _ => console.log('not ok'));
+}).then(_ => console.log('ok'), _ => console.log('not ok')); */
+
+// ---------------------------------------------------------------
+
+/* // chained Promise 1
+
+const dinnerEaten = true;
+const wasTasty = false;
+
+const Dinner = new Promise((resolve, reject) => {if (dinnerEaten) {resolve()} else {reject()}})
+.then(_ => setTimeout(_ => console.log('Dinner eaten...'),2000), _ => console.log('I\'m still hungry!'));
+
+const Tasty = new Promise(function(resolve, reject) {if (wasTasty) {resolve()} else {reject()}})
+.then(_ => console.log("and it was tasty! MNIAM!"), function () {console.log("but it was awful. Ble... :(")}) */
+
+// ---------------------------------------------------------------
+
+/* // chained Promise 2
+
+const dinnerEaten = true;
+const wasTasty = false;
+
+const Dinner = new Promise((resolve, reject) => {if (dinnerEaten) {resolve()} else {reject()}})
+.then(_ => {
+    console.log('Dinner eaten...');
+    Tasty.then(_ => console.log("and it was tasty! MNIAM!"), function () {console.log("but it was awful. Ble... :(")})
+}
+    , _ => console.log('I\'m still hungry!'));
+
+const Tasty = new Promise(function(resolve, reject) {if (wasTasty) {resolve()} else {reject()}}) */
+
+// ---------------------------------------------------------------
+
+
 
 
 /* const myPromise2 = new Promise((resolve, reject) => {
