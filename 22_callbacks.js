@@ -1,7 +1,10 @@
-const talkDelay = () => Math.floor(Math.random() * 1000) + 1000;
-const talkLongDelay = 4000;
+const talkDelay = () => Math.floor(Math.random() * 1000) + 500;
+const talkLongDelay = 3000;
 
-const arr = ['- Cześć Ksenia', '- Cześć Adam, co tam?', '- Chuj Ci w dupę.', '- ... jak zawsze uprzejmy, a tak na serio to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- Aha, i chuj Ci w dupę też.'];
+const arr = ['- Cześć Ksenia.', '- Cześć Adam, co tam?', '- Chuj Ci w dupę.', '- ... jak zawsze uprzejmy, a tak na serio, to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- ... i chuj Ci w dupę też.'];
+
+//  21_promises.js - O TYM PLIKU CHCĘ POGADAĆ
+//  oraz tutaj o tym czym jest argument resolve
 
 ////////// rozmowa typ 5 Promises
 
@@ -17,45 +20,40 @@ new Promise((resolve) => {
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve, talkDelay()); // co to jest ten resolve, który jest w setTimeout jako funkcja argument, a przecież to nie jest argument
         })
     })
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve,talkDelay());
         })
     })
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve,talkDelay());
         })
     })
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve,talkLongDelay);
         })
     })
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve,talkLongDelay);
         })
     }).then(_ => {
         print();
         return new Promise((resolve) => {
-            resolve();
+            setTimeout(resolve,talkLongDelay);
         })
     }).then(_ => {
         print();
-        return new Promise((resolve) => {
-            resolve();
-        })
     })
-
-
 
 
 ////////// rozmowa typ 4 async callbacks
@@ -82,6 +80,9 @@ new Promise((resolve) => {
 //                     print(elem);
 //                     talkLong((elem) => {
 //                         print(elem);
+//                         talkLong((elem) => {
+//                             print(elem);
+//                         })
 //                     })
 //                 })
 //             })
