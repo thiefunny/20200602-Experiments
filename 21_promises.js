@@ -1,3 +1,4 @@
+
 // chained Promise 3
 
 const dinnerEaten = false;
@@ -20,8 +21,15 @@ const Tasty = new Promise((resolve, reject) => {
 })
 
 Dinner
-.then(result => {console.log(result); return Tasty}, result => {console.log(result);})
-.then(result => console.log(result), result => console.log(result))
+.then(result => {console.log(result); return Tasty})
+.then(result => console.log(result))
+.catch(result => console.log(result))
+
+
+
+
+
+// .then(result => console.log(result), result => console.log(result))
 
 
 // ---------------------------------------------------------------
