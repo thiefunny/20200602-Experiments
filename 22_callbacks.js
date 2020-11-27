@@ -1,38 +1,93 @@
-const talkDelay = () => Math.floor(Math.random()*1000)+1000;
+const talkDelay = () => Math.floor(Math.random() * 1000) + 1000;
 const talkLongDelay = 4000;
 
-const arr = ['- Cześć Zosia', '- Cześć Adam, co tam?', '- Chuj Ci w dupę.', '- ... jak zawsze uprzejmy, a tak na serio to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- Aha, i chuj Ci w dupę też.'];
+const arr = ['- Cześć Ksenia', '- Cześć Adam, co tam?', '- Chuj Ci w dupę.', '- ... jak zawsze uprzejmy, a tak na serio to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- Aha, i chuj Ci w dupę też.'];
+
+////////// rozmowa typ 5 Promises
+
+let indexArr = -1;
+const setIndex = _ => indexArr += 1;
+const print = _ => {
+    console.log(arr[setIndex()])
+}
+
+new Promise((resolve) => {
+        resolve()
+    })
+    .then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    })
+    .then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    })
+    .then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    })
+    .then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    })
+    .then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    }).then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    }).then(_ => {
+        print();
+        return new Promise((resolve) => {
+            resolve();
+        })
+    })
+
+
+
 
 ////////// rozmowa typ 4 async callbacks
 
-let indexArr = -1;
+// let indexArr = -1;
 
-const setIndex = _ => indexArr += 1;
+// const setIndex = _ => indexArr += 1;
 
-const talk = (callback) => setTimeout(_ => callback(arr[setIndex()]), talkDelay());
-const talkLong = (callback) => setTimeout(_ => callback(arr[setIndex()]), talkLongDelay);
+// const talk = (callback) => setTimeout(_ => callback(arr[setIndex()]), talkDelay());
+// const talkLong = (callback) => setTimeout(_ => callback(arr[setIndex()]), talkLongDelay);
 
 
-const print = arg => console.log(arg);
+// const print = arg => console.log(arg);
 
-talk((elem) => {
-    print(elem);
-    talk((elem) => {
-        print(elem);
-        talk((elem) => {
-            print(elem);
-            talk((elem) => {
-                print(elem);
-                talkLong((elem) => {
-                    print(elem);
-                    talkLong((elem) => {
-                        print(elem);
-                    })
-                })
-            })
-        })
-    })
-})
+// talk((elem) => {
+//     print(elem);
+//     talk((elem) => {
+//         print(elem);
+//         talk((elem) => {
+//             print(elem);
+//             talk((elem) => {
+//                 print(elem);
+//                 talkLong((elem) => {
+//                     print(elem);
+//                     talkLong((elem) => {
+//                         print(elem);
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })
 
 
 
@@ -60,6 +115,7 @@ talk((elem) => {
 
 
 
+
 ////////// rozmowa typ 2 callbacks
 
 // let indexArr = -1;
@@ -79,7 +135,7 @@ talk((elem) => {
 
 
 
-////////// rozmowa typ 1
+////////// rozmowa typ 1 setInterval
 
 /* let x = 0
 
