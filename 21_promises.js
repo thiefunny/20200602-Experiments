@@ -1,7 +1,7 @@
 // chained Promise 3
 
 const dinnerEaten = true;
-const wasTasty = true;
+const wasTasty = false;
 
 const Dinner = new Promise((resolve, reject) => {if (dinnerEaten) {resolve('Dinner eaten...')} else {reject('I\'m still hungry!')}})
 
