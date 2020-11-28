@@ -3,8 +3,6 @@ const talkLongDelay = 3000;
 
 const arr = ['- Cześć Ksenia.', '- Cześć Adam, co tam?', '- Chuj Ci w dupę.', '- ... jak zawsze uprzejmy, a tak na serio, to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- ... i chuj Ci w dupę też.'];
 
-//  21_promises.js - O TYM PLIKU CHCĘ POGADAĆ
-//  oraz tutaj o tym czym jest argument resolve
 
 ////////// rozmowa typ 5 Promises
 
