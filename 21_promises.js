@@ -1,8 +1,7 @@
-
 // chained Promise 3
 
-const dinnerEaten = false;
-const wasTasty = false;
+const dinnerEaten = true;
+const wasTasty = true;
 
 const Dinner = new Promise((resolve, reject) => {
     if (dinnerEaten) {
@@ -12,21 +11,23 @@ const Dinner = new Promise((resolve, reject) => {
     }
 })
 
-const Tasty = new Promise((resolve, reject) => {
-    if (wasTasty) {
-        resolve("and it was tasty! MNIAM!")
-    } else {
-        reject("but it was awful. Ble... :(")
-    }
-})
+// const Tasty = new Promise((resolve, reject) => {
+//     if (wasTasty) {
+//         resolve("and it was tasty! MNIAM!")
+//     } else {
+//         reject("but it was awful. Ble... :(")
+//     }
+// })
 
-Dinner
-.then(result => {console.log(result); return Tasty})
-.then(result => console.log(result))
-.catch(result => console.log(result))
-
-
-
+Dinner.then(result => {console.log(result); return new Promise((resolve, reject) => {
+        if (wasTasty) {
+            resolve("and it was tasty! MNIAM!")
+        } else {
+            reject("but it was awful. Ble... :(")
+        }
+    })})
+    .then(result => console.log(result))
+    .catch(result => console.log(result))
 
 
 // .then(result => console.log(result), result => console.log(result))
