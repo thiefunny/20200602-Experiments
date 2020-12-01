@@ -12,9 +12,9 @@ const URL = `${URL_END_POINT}${SEARCH_TYPE}${URL_API_KEY}${SEARCH_QUERY}`;
 const URL2 = `${URL_END_POINT}${SEARCH_TYPE}${URL_API_KEY}${SEARCH_QUERY_PAGE}`;
 
 let moviesArr = [];
+const loopPopulate = _
 
 const populateArr = _ => {
-
     return fetch(URL)
         .then(response => response.json())
         .then(result => {
@@ -23,32 +23,46 @@ const populateArr = _ => {
                     .then(response => response.json())
                     .then(result => {
                         result.results.forEach(movie => moviesArr.push(movie))
-                        return moviesArr
                     })
             }
-            return new Promise((resolve) => {
-                resolve(moviesArr)
-            })
         })
-        .then(result => {
-            console.log(result.length)
-            console.log(result)
-            console.log(moviesArr.length)
-        })
+    }
 
-}
+populateArr().then(_ => {
+    console.log(moviesArr)
+});
 
-
-// const print = elem => {console.log(elem)}
+// const 
 
 
-populateArr();
 
-let mymovie = {
-    title: '',
-    image: ''
-};
-moviesArr.forEach(movie => {
-    mymovie.title = movie.title;
-    mymovie.image = movie.poster_path;
-})
+// const populateArr = _ => {
+
+//     fetch(URL)
+//         .then(response => response.json())
+//         .then(result => {
+//             for (let i = 1; i < result.total_pages + 1; i++) {
+//                 fetch(`${URL2}${i}`)
+//                     .then(response => response.json())
+//                     .then(result => {
+//                         console.log(result)                        
+//                         return result
+//                     })
+//             }
+//         })
+// }
+
+
+
+// // const print = elem => {console.log(elem)}
+
+// console.log(populateArr());
+
+// let mymovie = {
+//     title: '',
+//     image: ''
+// };
+// moviesArr.forEach(movie => {
+//     mymovie.title = movie.title;
+//     mymovie.image = movie.poster_path;
+// })
