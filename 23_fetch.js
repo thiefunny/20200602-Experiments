@@ -3,8 +3,9 @@ const imgEl = document.querySelector('img');
 const mainEl = document.querySelector('main');
 
 const URL_END_POINT = "https://api.themoviedb.org/3/"
-const SEARCH_TYPE = `keyword/7376/movies`
-const URL_API_KEY = `?api_key=db59a7858683873689962abfe2676567&query=`
+const SEARCH_TYPE = `search/movie`
+// const SEARCH_TYPE = `keyword/7376/movies`
+const URL_API_KEY = `?api_key=db59a7858683873689962abfe2676567&query=princess`
 const SEARCH_QUERY = `&page=1`
 const SEARCH_QUERY_PAGE = `&page=`
 
