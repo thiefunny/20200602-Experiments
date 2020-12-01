@@ -3,10 +3,6 @@ const talkLongDelay = 3000;
 
 const arr = ['- Cześć Ksenia.', '- Cześć Adam, co tam?', '- ************.', '- ... jak zawsze uprzejmy, a tak na serio, to co chciałeś?', `- ... długo jeszcze będę czekać na odpowiedź? Minęło już ${talkLongDelay} milisekund...`, `- ... aaa whatever, pa Adaś...`, '- ... i Tobie ************* też.'];
 
-//  21_promises.js - O TYM PLIKU CHCĘ POGADAĆ
-//  oraz tutaj o tym czym jest argument resolve
-// oraz że zaczyna się ta górka rozwizywać od najbardziej zagnieżdżonej, ale nie jestem pewien tutaj
-
 ////////// rozmowa typ 5 Promises
 
 let indexArr = -1;
@@ -22,7 +18,7 @@ new Promise((resolve) => {
     .then(_ => {
         print();
         return new Promise((resolve) => {
-            setTimeout(resolve, talkDelay()); // co to jest ten resolve, który jest w setTimeout jako funkcja argument, a przecież to nie jest argument
+            setTimeout(resolve, talkDelay());
         })
     })
     .then(_ => {
